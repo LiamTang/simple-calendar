@@ -1,0 +1,60 @@
+@import "base";
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background;
+  .card {
+    height: 32rem;
+    width: 25rem;
+    background: $cardBackground;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      color: $month;
+      font-size: 0.7rem;
+      height: 10vh;
+      border-bottom: 2px solid #25292d;
+
+      button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        color: white;
+        box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337;
+        background: $button;
+        &:hover {
+          transform: scale(0.9);
+          box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337,
+            inset 6px 6px 13px #202325, inset -6px -6px 13px #2e3337;
+          transition: all 0.2s;
+        }
+        .fas {
+          color: $arrow;
+        }
+      }
+    }
+    .bottom {
+      .week {
+        display: flex;
+        justify-content: space-around;
+        color: $week;
+        font-size: 0.7rem;
+        margin-top: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+/* font family*/
+$fontType: "Mulish", sans-serif;
+
+/* colors */
+$cardBackground: #34393e;
+$background: #272b2e;
+$button: linear-gradient(145deg, #2a2e31, #232729);
+$arrow: #7d8083;
+$month: #d2d2d3;
+$week: #cbcbcc;
+$day: #616569;
+$selected: linear-gradient(
+  90deg,
+  rgba(187, 37, 15, 1) 0%,
+  rgba(233, 83, 34, 1) 50%,
+  rgba(187, 37, 15, 1) 100%
+);
+
+/* media query*/
+$small-screen-max: 480px;
+$medium-screen-max: 768px;
+$large-screen-max: 992px;
+$xLarge-screen-max: 1200px;
+
+@mixin smallMedia {
+  @media (max-width:#{$small-screen-max}) {
+    @content;
+  }
+}
+
+@mixin mediumMedia {
+  @media (max-width:#{$medium-screen-max}) {
+    @content;
+  }
+}
+
+@mixin largeMedia {
+  @media (max-width: #{$large-screen-max}) {
+    @content;
+  }
+}
+
+@mixin xLargeMedia {
+  @media (max-width:#{$xLarge-screen-max}) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: $fontType;
+  text-decoration: none;
+  list-style: none;
+  @include xLargeMedia() {
+    font-size: 18px;
+  }
+  @include largeMedia() {
+    font-size: 16px;
+  }
+  @include mediumMedia() {
+    font-size: 14px;
+  }
+  @include smallMedia() {
+    font-size: 14px;
+  }
+}
