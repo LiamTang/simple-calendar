@@ -59,16 +59,24 @@ section .card {
 
 section .card .top {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
   color: #d2d2d3;
   font-size: 0.7rem;
-  height: 10vh;
+  height: 12vh;
   border-bottom: 2px solid #25292d;
 }
 
-section .card .top button {
+section .card .top .top-month {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+section .card .top .top-month button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -81,22 +89,27 @@ section .card .top button {
   background: linear-gradient(145deg, #2a2e31, #232729);
 }
 
-section .card .top button:hover {
+section .card .top .top-month button:hover {
   transform: scale(0.9);
   box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337, inset 6px 6px 13px #202325, inset -6px -6px 13px #2e3337;
   transition: all 0.2s;
 }
 
-section .card .top button .fas {
+section .card .top .top-month button .fas {
   color: #7d8083;
 }
 
-section .card .bottom .week {
+section .card .bottom {
+  width: 100%;
+}
+
+section .card .bottom .bottom-style {
   display: flex;
   justify-content: space-around;
   color: #cbcbcc;
   font-size: 0.7rem;
   margin-top: 1.2rem;
   font-weight: 600;
+  width: 15%;
 }
 /*# sourceMappingURL=index.css.map */
