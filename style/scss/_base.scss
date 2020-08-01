@@ -9,14 +9,19 @@ $background: #272b2e;
 $button: linear-gradient(145deg, #2a2e31, #232729);
 $arrow: #7d8083;
 $month: #d2d2d3;
-$week: #cbcbcc;
-$day: #616569;
 $selected: linear-gradient(
   90deg,
   rgba(187, 37, 15, 1) 0%,
   rgba(233, 83, 34, 1) 50%,
   rgba(187, 37, 15, 1) 100%
 );
+
+/* font type for week and day*/
+@mixin fontTypeOne {
+  color: #cbcbcc;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
 
 /* media query*/
 $small-screen-max: 480px;

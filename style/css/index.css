@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 /* font family*/
 /* colors */
+/* font type for week and day*/
 /* media query*/
 * {
   margin: 0;
@@ -89,7 +90,7 @@ section .card .top .top-month button {
   background: linear-gradient(145deg, #2a2e31, #232729);
 }
 
-section .card .top .top-month button:hover {
+section .card .top .top-month button:active {
   transform: scale(0.9);
   box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337, inset 6px 6px 13px #202325, inset -6px -6px 13px #2e3337;
   transition: all 0.2s;
@@ -99,17 +100,47 @@ section .card .top .top-month button .fas {
   color: #7d8083;
 }
 
-section .card .bottom {
-  width: 100%;
-}
-
-section .card .bottom .bottom-style {
+section .card .bottom #week {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
   color: #cbcbcc;
   font-size: 0.7rem;
-  margin-top: 1.2rem;
   font-weight: 600;
-  width: 15%;
+}
+
+section .card .bottom #week li {
+  width: 14%;
+  text-align: center;
+}
+
+section .card .bottom #day {
+  display: flex;
+  flex-wrap: wrap;
+  color: #cbcbcc;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+section .card .bottom #day li {
+  width: 14%;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+section .card .bottom #day .active {
+  background: linear-gradient(90deg, #bb250f 0%, #e95322 50%, #bb250f 100%);
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+
+section .card .bottom #day .hover {
+  cursor: pointer;
+}
+
+section .card .bottom #day .hover:active {
+  border: 1px solid #272b2e;
+  border-radius: 50%;
+  transform: scale(0.8);
 }
 /*# sourceMappingURL=index.css.map */
