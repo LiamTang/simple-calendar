@@ -77,6 +77,10 @@ section .card .top .top-month {
   width: 100%;
 }
 
+section .card .top .top-month h2 {
+  cursor: pointer;
+}
+
 section .card .top .top-month button {
   border: none;
   outline: none;
@@ -86,13 +90,13 @@ section .card .top .top-month button {
   border-radius: 50%;
   transition: all 0.2s;
   color: white;
-  box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337;
+  box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337, inset 6px 6px 13px #202325, inset -6px -6px 13px #2e3337;
   background: linear-gradient(145deg, #2a2e31, #232729);
 }
 
 section .card .top .top-month button:active {
   transform: scale(0.9);
-  box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337, inset 6px 6px 13px #202325, inset -6px -6px 13px #2e3337;
+  box-shadow: 6px 6px 13px #202325, -6px -6px 13px #2e3337;
   transition: all 0.2s;
 }
 
@@ -100,7 +104,7 @@ section .card .top .top-month button .fas {
   color: #7d8083;
 }
 
-section .card .bottom #week {
+section .card .bottom .show-week #week {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.2rem;
@@ -109,12 +113,12 @@ section .card .bottom #week {
   font-weight: 600;
 }
 
-section .card .bottom #week li {
+section .card .bottom .show-week #week li {
   width: 14%;
   text-align: center;
 }
 
-section .card .bottom #day {
+section .card .bottom .show-week #day {
   display: flex;
   flex-wrap: wrap;
   color: #cbcbcc;
@@ -122,25 +126,49 @@ section .card .bottom #day {
   font-weight: 600;
 }
 
-section .card .bottom #day li {
+section .card .bottom .show-week #day li {
   width: 14%;
   text-align: center;
   padding: 1.2rem;
+  color: #707477;
 }
 
-section .card .bottom #day .active {
-  background: linear-gradient(90deg, #bb250f 0%, #e95322 50%, #bb250f 100%);
+section .card .bottom .show-week #day .active-style {
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+section .card .bottom .show-week #day .active-style:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  transform: scale(0.8);
+  background: linear-gradient(90deg, #bb250f 0%, #e95322 50%, #bb250f 100%);
+  box-shadow: 2px 2px 7px #9f1f0d, -2px -2px 7px #d72b11;
 }
 
-section .card .bottom #day .hover {
+section .card .bottom .show-week #day .hover {
   cursor: pointer;
 }
 
-section .card .bottom #day .hover:active {
+section .card .bottom .show-week #day .hover:active {
   border: 1px solid #272b2e;
-  border-radius: 50%;
-  transform: scale(0.8);
+}
+
+section .card .bottom .show-month {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+section .card .bottom .show-month li {
+  width: 25%;
 }
 /*# sourceMappingURL=index.css.map */

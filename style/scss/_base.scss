@@ -9,6 +9,8 @@ $background: #272b2e;
 $button: linear-gradient(145deg, #2a2e31, #232729);
 $arrow: #7d8083;
 $month: #d2d2d3;
+$week: #cbcbcc;
+$day: #707477;
 $selected: linear-gradient(
   90deg,
   rgba(187, 37, 15, 1) 0%,
@@ -18,10 +20,11 @@ $selected: linear-gradient(
 
 /* font type for week and day*/
 @mixin fontTypeOne {
-  color: #cbcbcc;
+  color: $week;
   font-size: 0.7rem;
   font-weight: 600;
 }
+
 
 /* media query*/
 $small-screen-max: 480px;
