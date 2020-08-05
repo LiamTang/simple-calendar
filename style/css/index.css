@@ -50,7 +50,7 @@ section {
 }
 
 section .card {
-  height: 32rem;
+  height: 30rem;
   width: 25rem;
   background: #34393e;
   border-radius: 20px;
@@ -102,6 +102,12 @@ section .card .top .top-month button:active {
 
 section .card .top .top-month button .fas {
   color: #7d8083;
+}
+
+section .card .bottom .show-week {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s;
 }
 
 section .card .bottom .show-week #week {
@@ -161,14 +167,39 @@ section .card .bottom .show-week #day .hover:active {
   border: 1px solid #272b2e;
 }
 
+section .card .bottom .hide {
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateY(4rem);
+}
+
 section .card .bottom .show-month {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1.6rem;
   transition: all 0.3s;
   opacity: 0;
+  transform: translateY(-20rem);
 }
 
 section .card .bottom .show-month li {
   width: 25%;
+  padding: 1.6rem;
+  text-align: center;
+  cursor: pointer;
+  color: #d2d2d3;
+}
+
+section .card .bottom .show-month li:hover {
+  color: #bb250f;
+}
+
+section .card .bottom .show-month .month-highlight {
+  background: linear-gradient(90deg, #bb250f 0%, #e95322 50%, #bb250f 100%);
+}
+
+section .card .bottom .active {
+  opacity: 1;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=index.css.map */

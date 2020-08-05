@@ -1,18 +1,18 @@
 "use strict";
 let date = new Date();
 let months = [
-  "January",
-  "February",
-  "March",
-  "April",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
   "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 const cMonth = date.getMonth(); //the value of current month, never change
 
@@ -30,6 +30,10 @@ window.onload = function () {
 
   document.getElementById("month").onclick = function () {
     renderMonth();
+    document.querySelector(".show-week").classList.toggle("hide");
+    document.querySelector(".show-month").classList.toggle("active");
+    const monthShow = document.querySelector(".show-month");
+    monthShow.onclick = function () {};
   };
 };
 
@@ -64,7 +68,11 @@ function renderDate() {
 function renderMonth() {
   let monthText = "";
   for (let i = 0; i < months.length; i++) {
-    monthText += "<li>" + months[i] + "</li>";
+    if (months[i] === document.getElementById("month").innerHTML) {
+      monthText += "<li class=month-highlight>" + months[i] + "</li>";
+    } else {
+      monthText += "<li>" + months[i] + "</li>";
+    }
   }
-  document.querySelector("show-month").innerHTML = monthText;
+  document.querySelector(".show-month").innerHTML = monthText;
 }
