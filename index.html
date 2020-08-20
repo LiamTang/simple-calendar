@@ -9,35 +9,34 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
     />
-    <script src="javascript/index.js"></script>
   </head>
   <body>
     <section>
-      <div class="card">
+      <div class="title">/* Simple Javascript Calendar */</div>
+      <div class="calendar">
         <div class="top">
           <h2 id="year"></h2>
-          <div class="top-month">
+          <div class="month">
             <button id="prevMonth"><i class="fas fa-arrow-left"></i></button>
-            <h2 id="month"></h2>
+            <h2 id="curMonth"></h2>
             <button id="nextMonth"><i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
         <div class="bottom">
-          <div class="show-week">
-            <div id="week">
-              <li>SUN</li>
-              <li>MON</li>
-              <li>TUE</li>
-              <li>WED</li>
-              <li>THU</li>
-              <li>FRI</li>
-              <li>SAT</li>
-            </div>
-            <div id="day"></div>
+          <div id="week">
+            <li>SUN</li>
+            <li>MON</li>
+            <li>TUE</li>
+            <li>WED</li>
+            <li>THU</li>
+            <li>FRI</li>
+            <li>SAT</li>
           </div>
-          <div class="show-month"></div>
+          <div id="day"></div>
         </div>
+        <div class="bottom-show-month"></div>
       </div>
     </section>
+    <script src="javascript/index.js"></script>
   </body>
 </html>

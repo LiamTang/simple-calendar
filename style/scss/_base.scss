@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 /* font family*/
-$fontType: "Mulish", sans-serif;
+$fontType: 'Mulish', sans-serif;
 
-/* colors */
+/* global colors */
 $cardBackground: #34393e;
-$background: #272b2e;
+$background: #131321;
 $button: linear-gradient(145deg, #2a2e31, #232729);
 $arrow: #7d8083;
 $month: #d2d2d3;
@@ -17,6 +17,7 @@ $selected: linear-gradient(
   rgba(233, 83, 34, 1) 50%,
   rgba(187, 37, 15, 1) 100%
 );
+$title: #d2d2d3;
 
 /* font type for week and day*/
 @mixin fontTypeOne {
@@ -25,8 +26,7 @@ $selected: linear-gradient(
   font-weight: 600;
 }
 
-
-/* media query*/
+/* breakpoint and media query*/
 $small-screen-max: 480px;
 $medium-screen-max: 768px;
 $large-screen-max: 992px;
